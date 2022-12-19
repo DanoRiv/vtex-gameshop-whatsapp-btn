@@ -21,7 +21,7 @@ This custom component allows to add a whatsapp button that will redirect to a ch
   "itgloberspartnercl.whatsapp-button": "0.x"
 }
 ```
-Now, you are able to use all the blocks exported by the Login app. Check out the full list below:
+Now, you are able to use all the blocks exported by the Whatsapp Button app. Check out the full list below:
 
 | Block name   | Description  |
 | :----------: | :------------------------: |
