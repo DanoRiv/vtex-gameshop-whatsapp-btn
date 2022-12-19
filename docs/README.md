@@ -1,6 +1,6 @@
 📢 Use this project, [contribute](https://github.com/{OrganizationName}/{AppName}) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
-# APP NAME
+# VTEX GAMESHOP WHATSAPP BUTTON
 
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
@@ -8,26 +8,28 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
-Under the app's name, you should explain the topic, giving a **brief description** of its **functionality** in a store when installed.
+This custom component allows to add a whatsapp button that will redirect to a chat with the defined number and a predefined message. 
 
-Next, **add media** (either an image of a GIF) with the rendered components, so that users can better understand how the app works in practice. 
-
-![Media Placeholder](https://user-images.githubusercontent.com/52087100/71204177-42ca4f80-227e-11ea-89e6-e92e65370c69.png)
+![Whatsapp Button](https://res.cloudinary.com/dannt/image/upload/v1671227406/vtex-gs/danigameshop--itgloberspartnercl.myvtex.com_whatsapp-button_reoqfj.png)
 
 ## Configuration 
 
-In this section, you first must **add the primary instructions** that will allow users to use the app's blocks in their store, such as:
+1. Add the Whatsapp Button app to your theme's dependencies in the manifest.json file:
 
-1. Adding the app as a theme dependency in the `manifest.json` file;
-2. Declaring the app's main block in a given theme template or inside another block from the theme.
+```json
+{
+  "itgloberspartnercl.whatsapp-button": "0.x"
+}
+```
+Now, you are able to use all the blocks exported by the Login app. Check out the full list below:
 
-Remember to add a table with all blocks exported by the app and their descriptions. You can verify an example of it on the [Search Result documentation](https://vtex.io/docs/components/all/vtex.search-result@3.56.1/). 
+| Block name   | Description  |
+| :----------: | :------------------------: |
+| `whatsapp-button` | Renders a whatsapp button, as shown above. | 
 
-Next, add the **props table** containing your block's props. 
+Below you may find all available props to configure your whatsapp button:
 
-If the app exports more than one block, create several tables - one for each block. For example:
-
-### `block-1` props
+### `whatsapp-button` props
 
 | Prop name    | Type            | Description    | Default value                                                                                                                               |
 | ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
@@ -38,52 +40,14 @@ If the app exports more than one block, create several tables - one for each blo
 
 | Prop name    | Type            | Description    | Default value                                                                                                                               |
 | ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
-| `XXXXX`      | `XXXXXX`       | XXXXXXXX         | `XXXXXX`        |
+| `logo`      | `string`       | Link to the logo that will be displayed when the logo is rendered         | `"mi-logo.png"`        |
+| `phone`      | `string`       | The number to which the chat will be redirected         | `"3128924610"`        |
+| `message`      | `string`       | The predetermined message that will appear for the user to send          | `"estás comunicandote con gameshop"`        |
+| `width`      | `number`       | Logo width         | `60`        |
+| `heigth`      | `number`       | Logo heigth         | `60`        |
 
-Prop types are: 
-
-- `string` 
-- `enum` 
-- `number` 
-- `boolean` 
-- `object` 
-- `array` 
-
-When documenting a prop whose type is `object` or `array` another prop table will be needed. You can create it following the example below:
-
-- `propName` object:
-
-| Prop name    | Type            | Description    | Default value                                                                                                                               |
-| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
-| `XXXXX`      | `XXXXXX`       | XXXXXXXX         | `XXXXXX`        |
-
-
-Remember to also use this Configuration section to  **showcase any necessary disclaimer** related to the app and its blocks, such as the different behavior it may display during its configuration. 
-
-## Modus Operandi *(not mandatory)*
-
-There are scenarios in which an app can behave differently in a store, according to how it was added to the catalog, for example. It's crucial to go through these **behavioral changes** in this section, allowing users to fully understand the **practical application** of the app in their store.
-
-If you feel compelled to give further details about the app, such as it's **relationship with the VTEX admin**, don't hesitate to use this section. 
 
 ## Customization
-
-The first thing that should be present in this section is the sentence below, showing users the recipe pertaining to CSS customization in apps:
-
-`In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).`
-
-Thereafter, you should add a single column table with the available CSS handles for the app, like the one below. Note that the Handles must be ordered alphabetically.
-
-| CSS Handles |
-| ----------- | 
-| `XXXXX` | 
-| `XXXXX` | 
-| `XXXXX` | 
-| `XXXXX` | 
-| `XXXXX` |
-
-
-If there are none, add the following sentence instead:
 
 `No CSS Handles are available yet for the app customization.`
 
